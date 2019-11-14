@@ -54,33 +54,23 @@ public class Tenda {
     }
     
     public void engadirProducto (Producto p){
-        System.out.println(f.tendaSeleccionada);
-        if (f.mapaTendas.containsKey(f.getTendaSeleccionada())){
-           
-           System.out.println("Tenda atopada");
             this.productos.add(p);
             System.out.println("Producto engadido");
-        }
     }       
     
     public void engadirEmpregado (Empregado e){
-       if (f.mapaTendas.containsKey(f.tendaSeleccionada)){
             this.empregados.add(e);
             System.out.println("Empregado engadido");
-        }
     }
     
     public void eliminarProducto (Producto p){
-        if (f.mapaTendas.containsKey(f.tendaSeleccionada)){
             this.productos.remove(p);
             System.out.println("Producto eliminado");
-        }
     }
     
     public void eliminarEmpregado (Empregado e){
-        if (f.mapaTendas.containsKey(f.tendaSeleccionada)){
             this.empregados.remove(e);
             System.out.println("Empregado eliminado");
-        }
     }
 }
+

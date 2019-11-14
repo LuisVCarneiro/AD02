@@ -9,9 +9,6 @@ public class Franquicia {
 
     public HashMap <String, Tenda> mapaTendas = new HashMap <>();
     public HashMap <String, Cliente> mapaClientes = new HashMap <>();
-    String tendaSeleccionada;
-    String clienteSeleccionado = null;
-   
 
     public Franquicia() {
       
@@ -36,15 +33,14 @@ public class Franquicia {
             System.out.println("Este cliente xa existe");
         }
     }
-    
+
     public String seleccionarTenda(){
         Scanner teclado = new Scanner (System.in);
         System.out.println("Que tenda desexas seleccionar?:");
         for (String key : mapaTendas.keySet()){
             System.out.println(key);
         }
-        this.tendaSeleccionada = teclado.nextLine();
-        return  tendaSeleccionada;
+        return teclado.nextLine(); 
     }
     
     public String seleccionarCliente(){
@@ -53,52 +49,30 @@ public class Franquicia {
         for (String key : mapaClientes.keySet()){
             System.out.println(key);
         }
-        clienteSeleccionado = teclado.nextLine();
+        String clienteSeleccionado = teclado.nextLine();
         return  clienteSeleccionado;
     }
     
     public void eliminarTenda(Tenda t){
-        if (mapaTendas.containsKey(tendaSeleccionada)){
-            mapaTendas.remove(tendaSeleccionada);
+        if (mapaTendas.containsKey(seleccionarTenda())){
+            mapaTendas.remove(seleccionarTenda());
             System.out.println("Tenda eliminada");
         }
     }
     
     public void eliminarCliente(Cliente c){
-        if (mapaClientes.containsKey(clienteSeleccionado)){
-            mapaClientes.remove(clienteSeleccionado);
+        if (mapaClientes.containsKey(seleccionarCliente())){
+            mapaClientes.remove(seleccionarCliente());
             System.out.println("Cliente eliminado");
         }
     }
     
-    
-    public Tenda getTenda (String nome){//Método que nos da unha tenda que lle metemos por parámetro para engadir productos
+    public Tenda getTenda (String seleccionarTenda){//Método que nos da unha tenda que lle metemos por parámetro para engadir productos
         return new Tenda ();
     }
 
-    
-    public Cliente getCliente (String cliente){
-        return new Cliente ();
-    }
-
-    public String getTendaSeleccionada() {
-        return tendaSeleccionada;
-    }
-
-    public void setTendaSeleccionada(String tendaSeleccionada) {
-        this.tendaSeleccionada = tendaSeleccionada;
-    }
-
-    public String getClienteSeleccionado() {
-        return clienteSeleccionado;
-    }
-
-    public void setClienteSeleccionado(String clienteSeleccionado) {
-        this.clienteSeleccionado = clienteSeleccionado;
-    }
-    
-    public Tenda tendaSeleccionada (String tendaSeleccionada){
-        return new Tenda();
+    public Tenda tendaSeleccionada (String tendAux){
+        return null;
     }    
-    
+ 
 }
