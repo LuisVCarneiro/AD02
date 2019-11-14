@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class Almacenar {
     private String FILENAME = new String ("datos.json");
-     File arquivo = new File(FILENAME);
+    File arquivo = new File(FILENAME);
     
      
     public void gardarArquivo(Franquicia f){

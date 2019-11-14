@@ -49,9 +49,9 @@ public class Cliente {
         Scanner teclado = new Scanner (System.in);
         System.out.println("Nome do cliente: ");
         this.nome = teclado.next();
-        System.out.println("Apelido do empregado: ");
+        System.out.println("Apelido do cliente: ");
         this.apelidos = teclado.next();
-        System.out.println("Correo do empregado: ");
+        System.out.println("Correo do cliente: ");
         this.correo = teclado.next();
     }
 

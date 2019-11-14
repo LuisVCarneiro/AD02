@@ -1,0 +1,43 @@
+{
+  "mapaTendas": {
+    "Delegacion": {
+      "nome": "Delegacion",
+      "cidade": "Corunha",
+      "productos": [],
+      "empregados": [],
+      "f": {
+        "mapaTendas": {},
+        "mapaClientes": {}
+      }
+    },
+    "Central": {
+      "nome": "Central",
+      "cidade": "Santiago",
+      "productos": [],
+      "empregados": [],
+      "f": {
+        "mapaTendas": {},
+        "mapaClientes": {}
+      }
+    },
+    "Oficina": {
+      "nome": "Oficina",
+      "cidade": "Vigo",
+      "productos": [],
+      "empregados": [],
+      "f": {
+        "mapaTendas": {},
+        "mapaClientes": {}
+      }
+    }
+  },
+  "mapaClientes": {
+    "Luis": {
+      "nome": "Luis",
+      "apelidos": "Vidal",
+      "correo": "luisvidal@correo.com"
+    }
+  },
+  "tendaSeleccionada": "Central",
+  "clienteSeleccionado": "pericopalotes@correo.com"
+}
