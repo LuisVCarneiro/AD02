@@ -11,7 +11,6 @@ public class Franquicia {
     public HashMap <String, Cliente> mapaClientes = new HashMap <>();
 
     public Franquicia() {
-      
         this.mapaTendas = new HashMap <>();
         this.mapaClientes = new HashMap <>();
     }
@@ -40,7 +39,8 @@ public class Franquicia {
         for (String key : mapaTendas.keySet()){
             System.out.println(key);
         }
-        return teclado.nextLine(); 
+        String tendaSeleccionada = teclado.nextLine();
+        return tendaSeleccionada; 
     }
     
     public String seleccionarCliente(){
@@ -53,26 +53,23 @@ public class Franquicia {
         return  clienteSeleccionado;
     }
     
-    public void eliminarTenda(Tenda t){
-        if (mapaTendas.containsKey(seleccionarTenda())){
-            mapaTendas.remove(seleccionarTenda());
+    public void eliminarTenda(String nomeTenda){
+        if (mapaTendas.containsKey(nomeTenda)){
+            mapaTendas.remove(nomeTenda);
             System.out.println("Tenda eliminada");
         }
     }
     
-    public void eliminarCliente(Cliente c){
-        if (mapaClientes.containsKey(seleccionarCliente())){
-            mapaClientes.remove(seleccionarCliente());
+    public void eliminarCliente(String nomeCliente){
+        if (mapaClientes.containsKey(nomeCliente)){
+            mapaClientes.remove(nomeCliente);
             System.out.println("Cliente eliminado");
         }
     }
     
-    public Tenda getTenda (String seleccionarTenda){//Método que nos da unha tenda que lle metemos por parámetro para engadir productos
-        return new Tenda ();
+    public Tenda getTenda (String nomeTenda){//Método que nos da unha tenda que lle metemos por parámetro para engadir productos
+    
+        return new Tenda();
     }
-
-    public Tenda tendaSeleccionada (String tendAux){
-        return null;
-    }    
  
 }

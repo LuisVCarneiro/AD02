@@ -1,22 +1,8 @@
 
 package com.mycompany.tarefaad2maven;
 
-/*import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;*/
-import java.util.Scanner;
-/*import org.xml.sax.ContentHandler;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-import org.xml.sax.XMLReader;
-import org.xml.sax.helpers.XMLReaderFactory;*/
 
+import java.util.Scanner;
 
 public class Main {
     
@@ -55,10 +41,15 @@ public class Main {
                     alma.gardarArquivo(franquicia);//Método que crea o json
                     break;
                 case 2:
-                    
+                    String nomeTenda = franquicia.seleccionarTenda();
+                    franquicia.eliminarTenda(nomeTenda);
+                    alma.gardarArquivo(franquicia);
                     break;
                 case 3:
-                    
+                    nomeTenda = franquicia.seleccionarTenda();
+                    Tenda t3 = franquicia.getTenda(nomeTenda);
+                    System.out.println(t3);
+                   
                     break;
                 case 4:
                    
@@ -75,9 +66,8 @@ public class Main {
                     alma.gardarArquivo(franquicia);
                     break;
                 case 8:
-                    Cliente c8 = new Cliente();
-                    franquicia.seleccionarCliente();
-                    franquicia.eliminarCliente(c8);
+                    String nomeCliente = franquicia.seleccionarCliente();
+                    franquicia.eliminarCliente(nomeCliente);
                     alma.gardarArquivo(franquicia);
                     break;
                 case 9: 

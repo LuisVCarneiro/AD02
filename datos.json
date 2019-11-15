@@ -1,15 +1,5 @@
 {
   "mapaTendas": {
-    "Delegacion": {
-      "nome": "Delegacion",
-      "cidade": "Corunha",
-      "productos": [],
-      "empregados": [],
-      "f": {
-        "mapaTendas": {},
-        "mapaClientes": {}
-      }
-    },
     "Central": {
       "nome": "Central",
       "cidade": "Santiago",
@@ -31,12 +21,5 @@
       }
     }
   },
-  "mapaClientes": {
-    "Luis": {
-      "nome": "Luis",
-      "apelidos": "Vidal",
-      "correo": "luisvidal@correo.com"
-    }
-  },
-  "clienteSeleccionado": "pericopalotes@correo.com"
+  "mapaClientes": {}
 }

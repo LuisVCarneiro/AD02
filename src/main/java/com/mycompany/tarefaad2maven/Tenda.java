@@ -10,7 +10,6 @@ public class Tenda {
     public ArrayList <Producto> productos = new ArrayList <>();
     public ArrayList <Empregado> empregados = new ArrayList <>();
     Franquicia f = new Franquicia ();
-    String tSeleccionada;
     
     public Tenda(String nome, String cidade) {
         this.nome = nome;
@@ -54,13 +53,15 @@ public class Tenda {
     }
     
     public void engadirProducto (Producto p){
+        if (f.mapaTendas.containsKey(f.seleccionarTenda())){
             this.productos.add(p);
+        }
             System.out.println("Producto engadido");
     }       
     
-    public void engadirEmpregado (Empregado e){
+    public String engadirEmpregado (Empregado e){
             this.empregados.add(e);
-            System.out.println("Empregado engadido");
+            return  "Empregado engadido";
     }
     
     public void eliminarProducto (Producto p){
@@ -72,5 +73,6 @@ public class Tenda {
             this.empregados.remove(e);
             System.out.println("Empregado eliminado");
     }
+        
 }
 
