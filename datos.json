@@ -1,5 +1,15 @@
 {
   "mapaTendas": {
+    "1": {
+      "nome": "1",
+      "cidade": "Sada",
+      "productos": [],
+      "empregados": [],
+      "f": {
+        "mapaTendas": {},
+        "mapaClientes": {}
+      }
+    },
     "Central": {
       "nome": "Central",
       "cidade": "Santiago",

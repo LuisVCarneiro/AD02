@@ -47,16 +47,32 @@ public class Main {
                     break;
                 case 3:
                     nomeTenda = franquicia.seleccionarTenda();
-                    Tenda t3 = franquicia.getTenda(nomeTenda);
-                    System.out.println(t3);
-                   
+                    Tenda t3 = franquicia.getTendaSeleccionada(nomeTenda);
+                    Producto p = new Producto();
+                    p.pedirProducto();
+                    t3.engadirProducto(p);
+                    //franquicia.engadirTenda(t3);
+                    alma.gardarArquivo(franquicia);
                     break;
                 case 4:
-                   
+                    nomeTenda = franquicia.seleccionarTenda();
+                    Tenda t4 = franquicia.getTendaSeleccionada(nomeTenda);
+                    String nomeProducto = t4.elexirProducto();
+                    t4.getProductoSeleccionado(nomeProducto);
+                 
+                   break;
                 case 5:
+                    nomeTenda = franquicia.seleccionarTenda();
+                    Tenda t5 = franquicia.getTendaSeleccionada(nomeTenda);
+                    String nomeEmpregado = t5.elexirEmpregado();
+                    t5.getProductoSeleccionado(nomeEmpregado);
                     
                     break;
                 case 6:
+                    nomeTenda = franquicia.seleccionarTenda();
+                    Tenda t6 = franquicia.getTendaSeleccionada(nomeTenda);
+                    nomeEmpregado = t6.elexirEmpregado();
+                    t6.getProductoSeleccionado(nomeEmpregado);
                     
                     break;
                 case 7:

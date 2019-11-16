@@ -15,6 +15,24 @@ public class Franquicia {
         this.mapaClientes = new HashMap <>();
     }
     
+    public String seleccionarTenda(){
+        Scanner teclado = new Scanner (System.in);
+        System.out.println("Que tenda desexas seleccionar?:");
+        for (String key : mapaTendas.keySet()){
+            System.out.print(key + " ");
+        }
+        return teclado.nextLine(); 
+    }
+    
+    public String seleccionarCliente(){
+        Scanner teclado = new Scanner (System.in);
+        System.out.println("Que cliente desexas seleccionar?:");
+        for (String key : mapaClientes.keySet()){
+            System.out.println(key);
+        }
+        return teclado.nextLine();  
+    }
+    
     public void engadirTenda(Tenda t){
         String key = t.getNome();
         if (!this.mapaTendas.containsKey(key)){
@@ -32,26 +50,6 @@ public class Franquicia {
             System.out.println("Este cliente xa existe");
         }
     }
-
-    public String seleccionarTenda(){
-        Scanner teclado = new Scanner (System.in);
-        System.out.println("Que tenda desexas seleccionar?:");
-        for (String key : mapaTendas.keySet()){
-            System.out.println(key);
-        }
-        String tendaSeleccionada = teclado.nextLine();
-        return tendaSeleccionada; 
-    }
-    
-    public String seleccionarCliente(){
-        Scanner teclado = new Scanner (System.in);
-        System.out.println("Que cliente desexas seleccionar?:");
-        for (String key : mapaClientes.keySet()){
-            System.out.println(key);
-        }
-        String clienteSeleccionado = teclado.nextLine();
-        return  clienteSeleccionado;
-    }
     
     public void eliminarTenda(String nomeTenda){
         if (mapaTendas.containsKey(nomeTenda)){
@@ -67,8 +65,12 @@ public class Franquicia {
         }
     }
     
-    public Tenda getTenda (String nomeTenda){//Método que nos da unha tenda que lle metemos por parámetro para engadir productos
-    
+    public Tenda getTendaSeleccionada (String nomeTenda){//Método que nos da unha tenda que lle metemos por parámetro para engadir productos
+        if (mapaTendas.containsKey(nomeTenda)){
+            System.out.println("Tenda atopada");
+        } else{
+        System.out.println("Esa tenda non existe");
+        }
         return new Tenda();
     }
  
