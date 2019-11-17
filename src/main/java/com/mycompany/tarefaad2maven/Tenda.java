@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 public class Tenda {
     public String nome, cidade;
-   // public ArrayList <Producto> productos = new ArrayList <>();
     public HashMap <String, Producto> productos = new HashMap <>();
     public HashMap <String,Empregado> empregados = new HashMap <>();
     Franquicia f = new Franquicia ();
@@ -49,67 +48,57 @@ public class Tenda {
         System.out.println("Nome da tenda: ");
         this.nome = teclado.nextLine();
         System.out.println("Cidade donde se ubica: ");
-        this.cidade = teclado.nextLine();
-        
+        this.cidade = teclado.nextLine();       
     }
     
     public void engadirProducto (Producto p){
-        String key = "P" + p.getId();
+        String key = p.getId();
         this.productos.put(key,p);
         System.out.println("Producto engadido");
     }       
     
-    public String engadirEmpregado (Empregado e){
-        String key = "E" + e.getNomEmp();
+    public void engadirEmpregado (Empregado e){
+        String key = e.getNomEmp();
         this.empregados.put(key,e);
-        return  "Empregado engadido";
+        System.out.println("Empregado engadido");
     }
     
     public void eliminarProducto (Producto p){
-        
+        String key = p.getId();
+        this.productos.remove(key);
         System.out.println("Producto eliminado");
     }
     
     public void eliminarEmpregado (Empregado e){
-       
+        String key = e.getNomEmp();
+        this.empregados.remove(key);
         System.out.println("Empregado eliminado");
     }
-
-    
-    public String elexirProducto (){
+   
+    public String seleccionarProducto (){
         Scanner teclado = new Scanner (System.in);
         System.out.println("Escolle un producto: ");
-        for (String key : productos.keySet()){
+        for (String key : this.productos.keySet()){
             System.out.print (key + " ");
         }
         return teclado.nextLine();
     }
-
-    public Producto getProductoSeleccionado(String productoAux){
-        if (productos.containsKey(productoAux)){
-            System.out.println("Producto atopada");
-        } else{
-            System.out.println("Ese producto non existe");
-        }
-        return new Producto();
-    }
     
-    public String elexirEmpregado (){
+    public String seleccionarEmpregado (){
         Scanner teclado = new Scanner (System.in);
         System.out.println("Escolle un empregado: ");
-        for (String key : empregados.keySet()){
+        for (String key : this.empregados.keySet()){
             System.out.print(key + " ");
         }
         return teclado.nextLine();
     }
+    
+    public Producto getProductoSeleccionado(String nomeProducto){
+        return this.productos.get(nomeProducto);
+    }
 
-    public Producto getEmpregadoSeleccionado(String empregadoAux){
-        if (empregados.containsKey(empregadoAux)){
-            System.out.println("Empregado atopada");
-        } else{
-        System.out.println("Ese empregado non existe");
-        }
-        return new Producto();
+    public Empregado getEmpregadoSeleccionado(String nomeEmpregado){
+        return this.empregados.get(nomeEmpregado);
     }
      
     

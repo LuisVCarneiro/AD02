@@ -28,7 +28,7 @@ public class Franquicia {
         Scanner teclado = new Scanner (System.in);
         System.out.println("Que cliente desexas seleccionar?:");
         for (String key : mapaClientes.keySet()){
-            System.out.println(key);
+            System.out.println(key + " ");
         }
         return teclado.nextLine();  
     }
@@ -66,12 +66,7 @@ public class Franquicia {
     }
     
     public Tenda getTendaSeleccionada (String nomeTenda){//Método que nos da unha tenda que lle metemos por parámetro para engadir productos
-        if (mapaTendas.containsKey(nomeTenda)){
-            System.out.println("Tenda atopada");
-        } else{
-        System.out.println("Esa tenda non existe");
-        }
-        return new Tenda();
+        return mapaTendas.get(nomeTenda);
     }
  
 }

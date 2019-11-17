@@ -1,10 +1,35 @@
 {
   "mapaTendas": {
+    "Proba": {
+      "nome": "Proba",
+      "cidade": "Oza",
+      "productos": {},
+      "empregados": {},
+      "f": {
+        "mapaTendas": {},
+        "mapaClientes": {}
+      }
+    },
     "1": {
       "nome": "1",
       "cidade": "Sada",
-      "productos": [],
-      "empregados": [],
+      "productos": {},
+      "empregados": {
+        "Luis": {
+          "nomEmp": "Luis",
+          "apelEmp": "Vidal"
+        }
+      },
+      "f": {
+        "mapaTendas": {},
+        "mapaClientes": {}
+      }
+    },
+    "01": {
+      "nome": "01",
+      "cidade": "02",
+      "productos": {},
+      "empregados": {},
       "f": {
         "mapaTendas": {},
         "mapaClientes": {}
@@ -13,8 +38,8 @@
     "Central": {
       "nome": "Central",
       "cidade": "Santiago",
-      "productos": [],
-      "empregados": [],
+      "productos": {},
+      "empregados": {},
       "f": {
         "mapaTendas": {},
         "mapaClientes": {}
@@ -23,13 +48,26 @@
     "Oficina": {
       "nome": "Oficina",
       "cidade": "Vigo",
-      "productos": [],
-      "empregados": [],
+      "productos": {
+        "011": {
+          "id": "011",
+          "descripcion": "02",
+          "cantidade": "03",
+          "prezo": "04"
+        }
+      },
+      "empregados": {},
       "f": {
         "mapaTendas": {},
         "mapaClientes": {}
       }
     }
   },
-  "mapaClientes": {}
+  "mapaClientes": {
+    "Adrian": {
+      "nome": "Adrian",
+      "apelidos": "Vidal",
+      "correo": "Adrinamita"
+    }
+  }
 }

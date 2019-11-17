@@ -1,8 +1,6 @@
 package com.mycompany.tarefaad2maven;
 
 
-
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mycompany.tarefaad2maven.Franquicia;
