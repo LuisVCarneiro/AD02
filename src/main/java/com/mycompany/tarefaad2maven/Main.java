@@ -29,6 +29,7 @@ public class Main {
                     + "\n5:Engadir empregado. \n6:Eliminar empregado. \n7:Engadir cliente. \n8:Eliminar cliente. \n9:Crear copia de seguridade. "
                     + "\n10:Leer RRSS. \n11:Salir.");
             byte opcion = teclado.nextByte();
+            if (opcion > 0 && opcion <12){
             switch (opcion){
                 /*As opcións funcionan da mesma maneira.. Chamada a métodos das clases correspondentes 
                 e creación de obxetos de clase cos datos introducidos
@@ -110,6 +111,9 @@ public class Main {
                     System.exit(0);
                     break;
                     }
+            }else {
+                System.out.println("Introduce un número correcto.");       
+            }
         }
     }
 

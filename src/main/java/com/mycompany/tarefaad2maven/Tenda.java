@@ -1,7 +1,6 @@
 
 package com.mycompany.tarefaad2maven;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -10,7 +9,7 @@ public class Tenda {
     public String nome, cidade;
     public HashMap <String, Producto> productos = new HashMap <>();
     public HashMap <String,Empregado> empregados = new HashMap <>();
-    Franquicia f = new Franquicia ();
+   // Franquicia f = new Franquicia ();
     
     public Tenda(String nome, String cidade) {
         this.nome = nome;
